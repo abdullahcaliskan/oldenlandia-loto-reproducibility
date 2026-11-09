@@ -23,4 +23,3 @@ This repository contains one canonical implementation of the accepted-manuscript
 | `figures/marker_measurement_presence_audit.pdf` / `.png` | Diagnostic plot; not a manuscript supplementary figure (generated; not versioned) |
 
 The three MetaboLights input files are not versioned here. Generated `results/`, `figures/`, and `logs/` are excluded from version control; run the pipeline to regenerate them. No earlier exploratory analysis scripts are part of this canonical repository.
-

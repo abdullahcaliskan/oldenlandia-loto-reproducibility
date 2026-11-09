@@ -463,4 +463,3 @@ def run_data_audit(sm, feature_meta, combined, bio_meta, X):
         "feature_count_note": "Deposited matrices contain 629 negative-mode plus 714 positive-mode rows (1,343 total); the source investigation description reports 1,342.",
     }
     return audit, qc_df
-
