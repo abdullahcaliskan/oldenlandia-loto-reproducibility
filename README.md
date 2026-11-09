@@ -27,3 +27,58 @@ Deposited metabolite names can contain encoding artefacts (for example, `Lyonire
 
 The repository was verified with Python **3.13.5** (Python 3.13 is recommended). Install the pinned dependencies:
 
+```bash
+python -m pip install -r requirements.txt
+```
+
+The wrapper scripts below are the supported way to run the complete pipeline. A full run takes about 10 seconds in the verification environment.
+
+**Linux/macOS**
+
+```bash
+bash run_all.sh
+```
+
+**Windows**
+
+```bat
+run_all_windows.bat
+```
+
+The pipeline writes dataset-audit files, fold identifiers, sample-level out-of-fold predictions, metrics, marker metadata, a run manifest, verification checks, and the figures listed below to `results/`, `logs/`, and `figures/`. It also creates a marker-measurement-presence audit plot; this is a diagnostic output and **not** a supplementary figure submitted with the article.
+
+| Output file | Article item |
+|---|---|
+| `fig1_overview.pdf` / `.png` | Fig. 1 |
+| `fig2_loto_design.pdf` / `.png` | Fig. 2 |
+| `fig3_performance.pdf` / `.png` | Fig. 3 |
+| `fig4_plsda_scores.pdf` / `.png` | Fig. 4 |
+| `fig5_panel_ablation.pdf` / `.png` | Fig. 5 |
+
+These figures are regenerated from the same outputs as the published figures; the plotted values are identical, but layout and styling differ from the typeset article.
+
+The pipeline performs 40 fixed estimator fits (15 full-feature LOTO, five random-CV baseline, and 20 fixed-panel LOTO fits) and runs built-in checks against the manuscript-reported results and split integrity. The verification run completed with **43/43 checks passing (34 existing and nine additional checks) and zero captured estimator warnings**.
+
+## Reproducibility details
+
+- Master seed: `20260828`.
+- LOTO fold order: root, stem, leaf, flower, fruit.
+- Decision threshold: 0.5; *O. diffusa* is the positive class.
+- All preprocessing parameters are learned from the relevant training subset and applied unchanged to held-out samples.
+- The run manifest records the actual software versions and SHA-256 checksums of the input files used in that run.
+
+The verification run for this repository used Python 3.13.5, NumPy 2.3.5, pandas 2.2.3, SciPy 1.17.0, scikit-learn 1.8.0, and Matplotlib 3.10.8. The accepted manuscript reports Python 3.13.2, NumPy 2.0.2, pandas 3.0.3, SciPy 1.15.1, scikit-learn 1.9.0, and Matplotlib 3.10.0. These environments are not identical; the run manifest records the environment actually used for verification.
+
+## Interpretation and limitations
+
+The LOTO results assess tissue-domain holdout within this one deposited study. They do not establish donor independence, laboratory/geographic/seasonal/instrument generalization, or independent biomarker validation. The five-marker panel originated in an earlier exploratory analysis of the same dataset; its ablation is retrospective, not independent biomarker validation. External biological validation remains necessary before routine authentication.
+
+## Citation
+
+If you use this code, cite the associated article:
+
+Abdullah Caliskan, “Machine Learning for Medicinal-Plant Authentication Across Unseen Tissues Using Compact LC-MS Fingerprints,” *IEEE Access*.
+
+## Repository structure
+
+See [`MANIFEST.md`](MANIFEST.md) for the canonical file inventory. The analysis implementation is maintained in `src/`; the single supported entry point is `src/run_analysis.py`.
