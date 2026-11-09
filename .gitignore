@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.env
+.DS_Store
+
+# Downloaded public study matrices are not redistributed in this repository.
+data_input/*.tsv
+data_input/*.txt
+!data_input/README.md
+
+# Regenerated analysis outputs.
+results/
+logs/
+figures/
+

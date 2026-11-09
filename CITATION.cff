@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated IEEE Access article."
+title: "Oldenlandia LOTO Analysis"
+authors:
+  - family-names: Caliskan
+    given-names: Abdullah
+    orcid: "https://orcid.org/0000-0002-9265-6335"
+version: "1.0.0"
+date-released: "2026-11-10"
+license: MIT
+repository-code: "https://github.com/abdullahcaliskan/oldenlandia-loto-reproducibility"
+type: software
+
