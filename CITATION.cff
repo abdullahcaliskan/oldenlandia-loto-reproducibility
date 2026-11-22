@@ -10,3 +10,18 @@ date-released: "2026-11-10"
 license: MIT
 repository-code: "https://github.com/abdullahcaliskan/oldenlandia-loto-reproducibility"
 type: software
+
+preferred-citation:
+  type: article
+  title: "Machine Learning for Medicinal-Plant Authentication Across Unseen Tissues Using Compact LC-MS Fingerprints"
+  authors:
+    - family-names: Caliskan
+      given-names: Abdullah
+      orcid: "https://orcid.org/0000-0002-9265-6335"
+  journal: "IEEE Access"
+  year: 2026
+  volume: 14
+  start: "179555"
+  end: "179562"
+  doi: "10.1109/ACCESS.2026.3753475"
+  url: "https://doi.org/10.1109/ACCESS.2026.3753475"
