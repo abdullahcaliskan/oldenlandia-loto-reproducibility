@@ -764,7 +764,7 @@ def write_manifest():
             for path in sorted((Path(__file__).resolve().parents[1] / "data_input").iterdir())
             if path.is_file()
         },
-        "runtime_note": "The manuscript reports Python 3.13.2, NumPy 2.0.2, pandas 3.0.3, SciPy 1.15.1, and scikit-learn 1.9.0. This verification run used the software versions listed above; the environment difference is recorded explicitly.",
+        "runtime_note": "The published IEEE Access article reports Python 3.13.5, NumPy 2.3.5, pandas 2.2.3, SciPy 1.17.0, scikit-learn 1.8.0, and Matplotlib 3.10.0. The software block above records the versions actually used for this run.",
     }
     (RESULTS / "model_settings_and_run_manifest.json").write_text(
         json.dumps(settings, indent=2, ensure_ascii=False), encoding="utf-8"
