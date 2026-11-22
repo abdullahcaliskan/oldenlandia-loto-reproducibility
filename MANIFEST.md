@@ -1,6 +1,6 @@
 # Repository manifest
 
-This repository contains one canonical implementation of the accepted-manuscript analysis.
+This repository contains one canonical implementation of the analysis associated with the published IEEE Access article (2026, vol. 14, pp. 179555–179562; DOI: 10.1109/ACCESS.2026.3753475).
 
 | Path | Purpose |
 |---|---|
