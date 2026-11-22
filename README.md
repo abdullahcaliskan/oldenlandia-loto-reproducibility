@@ -1,8 +1,8 @@
 # Oldenlandia LOTO reproducibility repository
 
-This repository contains the fixed-setting analysis code associated with the accepted IEEE Access article:
+This repository contains the fixed-setting analysis code associated with the published IEEE Access article:
 
-Abdullah Caliskan, “Machine Learning for Medicinal-Plant Authentication Across Unseen Tissues Using Compact LC-MS Fingerprints,” *IEEE Access*.
+A. Caliskan, “Machine Learning for Medicinal-Plant Authentication Across Unseen Tissues Using Compact LC-MS Fingerprints,” *IEEE Access*, vol. 14, pp. 179555–179562, 2026. DOI: [10.1109/ACCESS.2026.3753475](https://doi.org/10.1109/ACCESS.2026.3753475).
 
 ## Study data
 
@@ -67,7 +67,7 @@ The pipeline performs 40 fixed estimator fits (15 full-feature LOTO, five random
 - All preprocessing parameters are learned from the relevant training subset and applied unchanged to held-out samples.
 - The run manifest records the actual software versions and SHA-256 checksums of the input files used in that run.
 
-The verification run for this repository used Python 3.13.5, NumPy 2.3.5, pandas 2.2.3, SciPy 1.17.0, scikit-learn 1.8.0, and Matplotlib 3.10.8. The accepted manuscript reports Python 3.13.2, NumPy 2.0.2, pandas 3.0.3, SciPy 1.15.1, scikit-learn 1.9.0, and Matplotlib 3.10.0. These environments are not identical; the run manifest records the environment actually used for verification.
+The verification run for this repository used Python 3.13.5, NumPy 2.3.5, pandas 2.2.3, SciPy 1.17.0, scikit-learn 1.8.0, and Matplotlib 3.10.8. The published article reports the same Python, NumPy, pandas, SciPy, and scikit-learn versions, and Matplotlib 3.10.0. The verification environment therefore differs in its Matplotlib version; the run manifest records the environment actually used.
 
 ## Interpretation and limitations
 
@@ -77,7 +77,7 @@ The LOTO results assess tissue-domain holdout within this one deposited study. T
 
 If you use this code, cite the associated article:
 
-Abdullah Caliskan, “Machine Learning for Medicinal-Plant Authentication Across Unseen Tissues Using Compact LC-MS Fingerprints,” *IEEE Access*.
+A. Caliskan, “Machine Learning for Medicinal-Plant Authentication Across Unseen Tissues Using Compact LC-MS Fingerprints,” *IEEE Access*, vol. 14, pp. 179555–179562, 2026. https://doi.org/10.1109/ACCESS.2026.3753475
 
 ## Repository structure
 
