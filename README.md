@@ -8,7 +8,7 @@ A. Caliskan, “Machine Learning for Medicinal-Plant Authentication Across Unsee
 
 The analysis uses the public MetaboLights study **MTBLS13314**, which contains LC–MS abundance matrices for *Oldenlandia diffusa* and *O. corymbosa*. The deposited data comprise 60 biological samples (two species × five tissues × six replicates), six pooled QC samples, and 1,343 assay features (629 negative-ion and 714 positive-ion). QC samples are included in the dataset audit and excluded from classifier fitting.
 
-The repository does not redistribute the study data. Download the three files listed in [`data_input/README.md`](data_input/README.md) from the official [MetaboLights study record](https://www.ebi.ac.uk/metabolights/MTBLS13314) and place them in `data_input/`.
+The repository does not redistribute the study data. Download the three files listed in [`data_input/README.md`](data_input/README.md) from the official [MetaboLights study record](https://www.ebi.ac.uk/metabolights/MTBLS13314) and place them in `data_input/`. The launcher checks that these inputs exist and prints their exact filenames if they are missing.
 
 ## Analysis implemented
 
